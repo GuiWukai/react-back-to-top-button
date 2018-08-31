@@ -2646,7 +2646,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n  font-size: 45px;\n  position: fixed;\n  right: 0;\n  bottom: 0;\n  margin: 30px;\n  border-radius: 50%;\n  border: none;\n  opacity: 0;\n  transition: 0.4s opacity ease;\n  cursor: pointer;\n  outline: none;\n"], ["\n  font-size: 45px;\n  position: fixed;\n  right: 0;\n  bottom: 0;\n  margin: 30px;\n  border-radius: 50%;\n  border: none;\n  opacity: 0;\n  transition: 0.4s opacity ease;\n  cursor: pointer;\n  outline: none;\n"]);
+var _templateObject = _taggedTemplateLiteral(["\n  font-size: 45px;\n  position: fixed;\n  right: 0;\n  bottom: 0;\n  margin: 30px;\n  border-radius: 50%;\n  border: none;\n  opacity: 0;\n  transition: 0.4s opacity ease;\n  cursor: pointer;\n  outline: none;\n  background: transparent;\n"], ["\n  font-size: 45px;\n  position: fixed;\n  right: 0;\n  bottom: 0;\n  margin: 30px;\n  border-radius: 50%;\n  border: none;\n  opacity: 0;\n  transition: 0.4s opacity ease;\n  cursor: pointer;\n  outline: none;\n  background: transparent;\n"]);
 
 var _react = __webpack_require__(2);
 
