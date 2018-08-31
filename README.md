@@ -49,3 +49,7 @@ class App extends Component {
 | speed          |          | `2000`          | `number`                        | scrolling speed                                                                   |
 | easing         |          | `"easeOutSine"` | `string`                        | scroll timing function. Options: "easeOutSine", "easeInOutSine", "easeInOutQuint" |
 | style          |          |                 | `Object`                        | style of the floating button.                                                     |
+
+## License
+
+[MIT](https://github.com/GuiWukai/react-back-to-top-button/blob/master/LICENSE)
