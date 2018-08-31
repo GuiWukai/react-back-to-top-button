@@ -1,6 +1,6 @@
 {
   "name": "react-back-to-top-button",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "react component to scroll back to the top",
   "main": "build/index.js",
   "license": "MIT",

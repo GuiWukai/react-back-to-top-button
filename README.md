@@ -40,15 +40,15 @@ class App extends Component {
 
 ## Props
 
-| Prop           | Required | Default         | Type                            | Description                                                                       |
-| -------------- | -------- | --------------- | ------------------------------- | --------------------------------------------------------------------------------- |
-| children       |          | `"UP"`          | `React.ReactElement` / `string` | content of the back to top component                                              |
-| scrollTo       |          | `0`             | `number`                        | scroll a certain position on click                                                |
-| showOnScrollUp |          | `false`         | `boolean`                       | show the back to top button only when the user scrolls up.                        |
-| showAt         |          | `1000`          | `number`                        | show the button at y position                                                     |
-| speed          |          | `2000`          | `number`                        | scrolling speed                                                                   |
-| easing         |          | `"easeOutSine"` | `string`                        | scroll timing function. Options: "easeOutSine", "easeInOutSine", "easeInOutQuint" |
-| style          |          |                 | `Object`                        | style of the floating button.                                                     |
+| Prop               | Required | Default         | Type                            | Description                                                                       |
+| ------------------ | -------- | --------------- | ------------------------------- | --------------------------------------------------------------------------------- |
+| **children**       |          | `"UP"`          | `React.ReactElement` / `string` | content of the back to top component                                              |
+| **scrollTo**       |          | `0`             | `number`                        | scroll a certain position on click                                                |
+| **showOnScrollUp** |          | `false`         | `boolean`                       | show the back to top button only when the user scrolls up.                        |
+| **showAt**         |          | `1000`          | `number`                        | show the button at y position                                                     |
+| **speed**          |          | `2000`          | `number`                        | scrolling speed                                                                   |
+| **easing**         |          | `"easeOutSine"` | `string`                        | scroll timing function. Options: "easeOutSine", "easeInOutSine", "easeInOutQuint" |
+| **style**          |          |                 | `Object`                        | style of the floating button.                                                     |
 
 ## License
 
