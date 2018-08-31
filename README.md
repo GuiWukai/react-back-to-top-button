@@ -31,7 +31,7 @@ class App extends Component {
         speed={1500}
         easing="easeInOutQuint"
       >
-        UP
+        <span>scroll up</span>
       </BackToTop>
     );
   }
@@ -43,7 +43,7 @@ class App extends Component {
 | Prop               | Required | Default         | Type                            | Description                                                                       |
 | ------------------ | -------- | --------------- | ------------------------------- | --------------------------------------------------------------------------------- |
 | **children**       |          | `"UP"`          | `React.ReactElement` / `string` | content of the back to top component                                              |
-| **scrollTo**       |          | `0`             | `number`                        | scroll a certain position on click                                                |
+| **scrollTo**       |          | `0`             | `number`                        | scroll to a certain position on click                                             |
 | **showOnScrollUp** |          | `false`         | `boolean`                       | show the back to top button only when the user scrolls up.                        |
 | **showAt**         |          | `1000`          | `number`                        | show the button at y position                                                     |
 | **speed**          |          | `2000`          | `number`                        | scrolling speed                                                                   |
