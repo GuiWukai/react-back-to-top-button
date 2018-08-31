@@ -2744,7 +2744,9 @@ var BackToTop = function (_PureComponent) {
 
         var backToTop = document.querySelector(".back-to-top");
 
-        if (st > _this.props.showAt) {
+        var showAt = _this.props.showAt || 1000;
+
+        if (st > showAt) {
           _this.setState({ isAtRange: true });
         } else {
           _this.setState({ isAtRange: false });
@@ -2781,7 +2783,7 @@ var BackToTop = function (_PureComponent) {
           onClick: this.moveToTop,
           style: this.props.style
         },
-        this.props.children
+        this.props.children || "UP"
       );
     }
   }]);

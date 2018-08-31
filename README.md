@@ -1,6 +1,6 @@
 # React-back-to-top-button
 
-A React higher-order component that scrolls back to the top.
+A React component that scrolls back to the top.
 
 ## Installation
 
