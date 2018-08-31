@@ -13,6 +13,7 @@ const Button = styled.button`
   transition: 0.4s opacity ease;
   cursor: pointer;
   outline: none;
+  background: transparent;
 `;
 
 function scrollToY(scrollTargetYY, speedd, easingg) {
