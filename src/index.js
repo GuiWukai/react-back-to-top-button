@@ -10,7 +10,7 @@ const Button = styled.button`
   border-radius: 50%;
   border: none;
   opacity: 0;
-  display: none;
+  visibility: hidden;
   transition: 0.4s opacity ease;
   cursor: pointer;
   outline: none;
@@ -99,20 +99,20 @@ class BackToTop extends PureComponent {
         if (this.props.showOnScrollUp) {
           if (st > lastScrollTop) {
             backToTop.style.opacity = 0;
-            backToTop.style.display = "none";
+            backToTop.style.visibility = "hidden";
           } else if (this.state.isAtRange) {
             backToTop.style.opacity = 1;
-            backToTop.style.display = "block";
+            backToTop.style.visibility = "visible";
           } else {
             backToTop.style.opacity = 0;
-            backToTop.style.display = "none";
+            backToTop.style.visibility = "hidden";
           }
         } else if (this.state.isAtRange) {
           backToTop.style.opacity = 1;
-          backToTop.style.display = "block";
+          backToTop.style.visibility = "visible";
         } else {
           backToTop.style.opacity = 0;
-          backToTop.style.display = "none";
+          backToTop.style.visibility = "hidden";
         }
 
         lastScrollTop = st <= 0 ? 0 : st;
@@ -122,7 +122,7 @@ class BackToTop extends PureComponent {
   };
 
   moveToTop = () => {
-    this.props.onClick();
+    this.props.onClick ? this.props.onClick() : null;
     scrollToY(this.props.scrollTo, this.props.speed, this.props.easing);
   };
 
