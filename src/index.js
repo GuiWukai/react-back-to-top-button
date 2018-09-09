@@ -10,6 +10,7 @@ const Button = styled.button`
   border-radius: 50%;
   border: none;
   opacity: 0;
+  display: none;
   transition: 0.4s opacity ease;
   cursor: pointer;
   outline: none;
@@ -98,15 +99,20 @@ class BackToTop extends PureComponent {
         if (this.props.showOnScrollUp) {
           if (st > lastScrollTop) {
             backToTop.style.opacity = 0;
+            backToTop.style.display = "none";
           } else if (this.state.isAtRange) {
             backToTop.style.opacity = 1;
+            backToTop.style.display = "block";
           } else {
             backToTop.style.opacity = 0;
+            backToTop.style.display = "none";
           }
         } else if (this.state.isAtRange) {
           backToTop.style.opacity = 1;
+          backToTop.style.display = "block";
         } else {
           backToTop.style.opacity = 0;
+          backToTop.style.display = "none";
         }
 
         lastScrollTop = st <= 0 ? 0 : st;
