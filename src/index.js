@@ -116,6 +116,7 @@ class BackToTop extends PureComponent {
   };
 
   moveToTop = () => {
+    this.props.onClick();
     scrollToY(this.props.scrollTo, this.props.speed, this.props.easing);
   };
 
