@@ -45,6 +45,7 @@ class App extends Component {
 | **children**       |          | `"UP"`          | `React.ReactElement` / `string` | content of the back to top component                                              |
 | **scrollTo**       |          | `0`             | `number`                        | scroll to a certain position on click                                             |
 | **showOnScrollUp** |          | `false`         | `boolean`                       | show the back to top button only when the user scrolls up.                        |
+| **ScrollOff**      |          | `false`         | `boolean`                       | scroll on top.                                                  |
 | **showAt**         |          | `1000`          | `number`                        | show the button at y position                                                     |
 | **speed**          |          | `2000`          | `number`                        | scrolling speed                                                                   |
 | **easing**         |          | `"easeOutSine"` | `string`                        | scroll timing function. Options: "easeOutSine", "easeInOutSine", "easeInOutQuint" |

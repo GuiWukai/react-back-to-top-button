@@ -145,7 +145,7 @@ export class BackToTop extends PureComponent<BackToTopProps> {
 
   moveToTop = () => {
     this.props.onClick ? this.props.onClick() : null;
-    scrollToY(this.props.scrollTo, this.props.speed, this.props.easing);
+    this.props.ScrollOff === undefined ? scrollToY(this.props.scrollTo, this.props.speed, this.props.easing) : null;
   };
 
   render() {
