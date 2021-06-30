@@ -1558,7 +1558,7 @@ var StyleSheetManager = function (_Component) {
     return _ref = {}, _ref[CONTEXT_KEY] = this.sheetInstance, _ref;
   };
 
-  StyleSheetManager.prototype.componentWillMount = function componentWillMount() {
+  StyleSheetManager.prototype.componentDidMount = function componentDidMount() {
     if (this.props.sheet) {
       this.sheetInstance = this.props.sheet;
     } else if (this.props.target) {
@@ -1884,7 +1884,7 @@ var ThemeProvider = function (_Component) {
     return _this;
   }
 
-  ThemeProvider.prototype.componentWillMount = function componentWillMount() {
+  ThemeProvider.prototype.componentDidMount = function componentDidMount() {
     var _this2 = this;
 
     // If there is a ThemeProvider wrapper anywhere around this theme provider, merge this theme
@@ -2080,7 +2080,7 @@ var BaseStyledComponent = function (_Component) {
     }
   };
 
-  BaseStyledComponent.prototype.componentWillMount = function componentWillMount() {
+  BaseStyledComponent.prototype.componentDidMount = function componentDidMount() {
     var _this2 = this;
 
     var componentStyle = this.constructor.componentStyle;
@@ -2528,7 +2528,7 @@ var withTheme = (function (Component$$1) {
     // NOTE: This is so that isStyledComponent passes for the innerRef unwrapping
 
 
-    WithTheme.prototype.componentWillMount = function componentWillMount() {
+    WithTheme.prototype.componentDidMount = function componentDidMount() {
       var _this2 = this;
 
       var defaultProps = this.constructor.defaultProps;
