@@ -25,7 +25,7 @@ const Button = styled.button`
   background: transparent;
 `;
 
-function scrollToY(scrollTargetYY, speedd, easingg) {
+function scrollToY(scrollTargetYY, speedd, easingg: Easing) {
   const scrollY = window.scrollY || document.documentElement.scrollTop;
   const scrollTargetY = scrollTargetYY || 0;
   const speed = speedd || 2000;
@@ -68,13 +68,17 @@ function scrollToY(scrollTargetYY, speedd, easingg) {
   tick();
 }
 
+enum Easing {
+  easeOutSine, easeInOutSine, easeInOutQuint
+}
+
 interface BackToTopProps {
   showAt: any;
   showOnScrollUp: any;
   style: any;
   onClick: Function;
   scrollTo: any;
-  easing: any;
+  easing: Easing;
   speed: any;
 }
 

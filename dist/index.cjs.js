@@ -80,6 +80,12 @@ function scrollToY(scrollTargetYY, speedd, easingg) {
     }
     tick();
 }
+var Easing;
+(function (Easing) {
+    Easing[Easing["easeOutSine"] = 0] = "easeOutSine";
+    Easing[Easing["easeInOutSine"] = 1] = "easeInOutSine";
+    Easing[Easing["easeInOutQuint"] = 2] = "easeInOutQuint";
+})(Easing || (Easing = {}));
 var BackToTop = /** @class */ (function (_super) {
     __extends(BackToTop, _super);
     function BackToTop() {
