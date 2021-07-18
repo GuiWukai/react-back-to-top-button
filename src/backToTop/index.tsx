@@ -1,6 +1,14 @@
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 
+declare global {
+  interface Window { 
+    requestAnimFrame: Function; 
+    webkitRequestAnimationFrame: (callback: FrameRequestCallback) => number;
+    mozRequestAnimationFrame: Function;
+  }
+}
+
 const Button = styled.button`
   font-size: 45px;
   position: fixed;
@@ -49,7 +57,7 @@ function scrollToY(scrollTargetYY, speedd, easingg) {
     const t = easingEquations[easing](p);
 
     if (p < 1) {
-      requestAnimFrame(tick);
+      window.requestAnimFrame(tick);
 
       window.scrollTo(0, scrollY + (scrollTargetY - scrollY) * t);
     } else {
@@ -60,7 +68,17 @@ function scrollToY(scrollTargetYY, speedd, easingg) {
   tick();
 }
 
-class BackToTop extends PureComponent {
+interface BackToTopProps {
+  showAt: any;
+  showOnScrollUp: any;
+  style: any;
+  onClick: Function;
+  scrollTo: any;
+  easing: any;
+  speed: any;
+}
+
+export class BackToTop extends PureComponent<BackToTopProps> {
   state = {
     isAtRange: false
   };
@@ -86,7 +104,7 @@ class BackToTop extends PureComponent {
       () => {
         const st = window.pageYOffset || document.documentElement.scrollTop;
 
-        const backToTop = document.querySelector(".back-to-top");
+        const backToTop: HTMLElement = document.querySelector(".back-to-top");
 
         const showAt = this.props.showAt || 1000;
 
@@ -98,20 +116,20 @@ class BackToTop extends PureComponent {
 
         if (this.props.showOnScrollUp) {
           if (st > lastScrollTop) {
-            backToTop.style.opacity = 0;
+            backToTop.style.opacity = "0";
             backToTop.style.visibility = "hidden";
           } else if (this.state.isAtRange) {
-            backToTop.style.opacity = 1;
+            backToTop.style.opacity = "1";
             backToTop.style.visibility = "visible";
           } else {
-            backToTop.style.opacity = 0;
+            backToTop.style.opacity = "0";
             backToTop.style.visibility = "hidden";
           }
         } else if (this.state.isAtRange) {
-          backToTop.style.opacity = 1;
+          backToTop.style.opacity = "1";
           backToTop.style.visibility = "visible";
         } else {
-          backToTop.style.opacity = 0;
+          backToTop.style.opacity = "0";
           backToTop.style.visibility = "hidden";
         }
 
@@ -138,5 +156,3 @@ class BackToTop extends PureComponent {
     );
   }
 }
-
-export default BackToTop;

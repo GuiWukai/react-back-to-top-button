@@ -1,8 +1,14 @@
 {
-  "name": "react-back-to-top-button",
-  "version": "0.0.14",
+  "name": "@guiwukai/react-back-to-top-button",
+  "version": "0.0.15",
   "description": "react component to scroll back to the top",
-  "main": "build/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": ["dist"],
+  "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@wkgui"
+  },
   "license": "MIT",
   "homepage": "https://github.com/GuiWukai/react-back-to-top-button",
   "repository": {
@@ -15,29 +21,32 @@
     "react"
   ],
   "peerDependencies": {
-    "react": "^15.5.4"
-  },
-  "dependencies": {
-    "react": "^15.5.4",
-    "webpack": "^2.6.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "rollup -c",
+    "build-watch": "rollup -c -w",
+    "start-playground": "cd playground && npm run start",
+    "i-all": "npm i && cd playground && npm i",
+    "dev": "npm-run-all --parallel build-watch start-playground"
   },
   "author": {
     "name": "Guillaume Ah-ki",
     "email": "guillaumeahki@gmail.com"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "styled-components": "^3.4.5"
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.11",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.53.2",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "styled-components": "^5.3.0",
+    "typescript": "^4.3.5"
   }
 }
