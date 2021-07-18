@@ -7,13 +7,13 @@ A React component that scrolls back to the top.
 With npm:
 
 ```sh
-npm install react-back-to-top-button
+npm install @guiwukai/react-back-to-top-button@0.0.16
 ```
 
 With yarn:
 
 ```sh
-yarn add react-back-to-top-button
+yarn add @guiwukai/react-back-to-top-button@0.0.16
 ```
 
 ## Example
