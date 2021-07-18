@@ -20,7 +20,7 @@ yarn add react-back-to-top-button
 
 ```jsx
 import React, { Component } from "react";
-import BackToTop from "react-back-to-top";
+import BackToTop from "react-back-to-top-button";
 
 class App extends Component {
   render() {
