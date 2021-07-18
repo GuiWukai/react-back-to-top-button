@@ -50,6 +50,13 @@ class App extends Component {
 | **easing**         |          | `"easeOutSine"` | `string`                        | scroll timing function. Options: "easeOutSine", "easeInOutSine", "easeInOutQuint" |
 | **style**          |          |                 | `Object`                        | style of the floating button.                                                     |
 
+## How to test in playground
+
+1. Clone repository
+2. Run `yarn build`
+3. Run `yarn  i-all`
+4. Run `yarn dev`
+
 ## License
 
 [MIT](https://github.com/GuiWukai/react-back-to-top-button/blob/master/LICENSE)
