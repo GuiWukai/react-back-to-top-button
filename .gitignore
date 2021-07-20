@@ -18,7 +18,6 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react
-
 /playground/node_modules
 /playground/src/component-lib
 /dist
